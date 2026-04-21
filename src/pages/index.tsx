@@ -14,15 +14,15 @@ export default function Home() {
   return (
     <>
       <div className="min-h-[2000px] bg-gradient-to-br from-green-50 via-white to-green-50">
-         <Navbar />  {/* done */}
-        <Hero />  {/* done */}
-        <Numbers />  {/* done */}
-        <Industries />  {/* done */}
-        <Works /> {/* done */}
-        <Features /> {/* done */}
-        <Testimonials /> {/* done */}
-        <Portfolio /> {/* done */}
-        <Action /> {/* done */}
+         <Navbar /> 
+        <Hero />  
+        <Numbers /> 
+        <Industries />
+        <Works />
+        <Features />
+        <Testimonials />
+        <Portfolio /> 
+        <Action />
         <ContactUs />
         <Footer/>
       </div>

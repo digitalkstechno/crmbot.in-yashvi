@@ -112,7 +112,7 @@ const Features = () => {
             ))}
           </div>
 
-          {/* RIGHT — Detail Card (મોબાઈલમાં આ પહેલા દેખાશે અથવા લિસ્ટની સાથે) */}
+          {/* RIGHT — Detail Card */}
           <div className="lg:sticky lg:top-28 order-1 lg:order-2">
             <div className="relative bg-white rounded-[2rem] p-6 md:p-10 border border-green-100 shadow-2xl shadow-green-100/40 overflow-hidden">
               
