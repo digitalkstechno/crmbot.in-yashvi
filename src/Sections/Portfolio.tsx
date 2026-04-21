@@ -49,7 +49,7 @@ const Portfolio = () => {
   ];
   return (
     <>
-      <div className="pt-15" id="Portfolio">
+      <div className="sm:py-10 md:py-15" id="Portfolio">
         <div className="max-w-6xl mx-auto px-6 text-center mb-14 mt-10">
           <div className="inline-flex items-center gap-3">
             <motion.div
@@ -93,7 +93,7 @@ const Portfolio = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.5 }}
           viewport={{ once: true }}
-          className="max-w-7xl mx-5 md:mx-11 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="max-w-7xl mx-auto px-5 md:px-11 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {cases.map((item, index) => (
             <div

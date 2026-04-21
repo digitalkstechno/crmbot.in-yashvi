@@ -44,7 +44,7 @@ const Features = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="Features" className="py-12 md:py-20">
+    <section id="Features" className="py-15 sm:py-10 md:py-15 2xl:py-20">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* ── Header ── */}
         <div className="text-center mb-12 md:mb-16">
@@ -140,7 +140,7 @@ const Features = () => {
 
           {/* RIGHT — Detail Card */}
           <div className="lg:sticky lg:top-28 order-1 lg:order-2">
-            <div className="relative bg-white rounded-[2rem] p-6 md:p-10 border border-green-100 shadow-2xl shadow-green-100/40 overflow-hidden">
+            <div className="relative bg-white rounded-[2rem] p-3 sm:p-6 md:p-10 border border-green-100 shadow-2xl shadow-green-100/40 overflow-hidden">
               {/* Decoration Circles */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-green-50 rounded-full opacity-50 pointer-events-none" />
               <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-green-50 rounded-full opacity-50 pointer-events-none" />
@@ -159,12 +159,12 @@ const Features = () => {
               </div>
 
               {/* Title */}
-              <h3 className="relative text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="relative text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 {data[active].title}
               </h3>
 
               {/* Desc */}
-              <p className="relative text-gray-500 text-base md:text-lg leading-relaxed mb-8">
+              <p className="relative text-gray-500 text-[15px] sm:text-base md:text-lg leading-relaxed mb-8">
                 {data[active].desc}
               </p>
 
@@ -178,7 +178,7 @@ const Features = () => {
                     <button
                       key={i}
                       onClick={() => setActive(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                      className={`hidden sm:block h-1.5 rounded-full transition-all duration-300 ${
                         active === i
                           ? "w-8 bg-green-500"
                           : "w-2 bg-gray-200 hover:bg-green-200"

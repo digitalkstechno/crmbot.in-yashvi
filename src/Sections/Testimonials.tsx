@@ -27,7 +27,7 @@ const Testimonials = () => {
   ];
   return (
     <>
-      <div className="mx-5 md:mx-10" id="Testimonials">
+      <div className="sm:py-10 md:py-15" id="Testimonials">
         <div className="max-w-6xl mx-auto px-6 text-center mb-14 mt-10">
           <div className="inline-flex items-center gap-2 ">
             <motion.div
@@ -71,12 +71,12 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.5 }}
           viewport={{ once: true }}
-          className="max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="max-w-7xl px-5 sm:px-10 pt-5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="group relative bg-white p-8 rounded-[32px] border border-transparent shadow-sm transition-all duration-300 hover:border-[#25D366] hover:shadow-[0_20px_40px_rgba(37,211,102,0.15)] hover:-translate-y-2 cursor-pointer flex flex-col gap-5 min-h-fit"
+              className="group relative bg-white p-4 sm:p-8 rounded-[32px] border border-transparent shadow-sm transition-all duration-300 hover:border-[#25D366] hover:shadow-[0_20px_40px_rgba(37,211,102,0.15)] hover:-translate-y-2 cursor-pointer flex flex-col gap-5 min-h-fit"
             >
               {/* 1. Stars */}
               <div className="flex">
@@ -100,15 +100,15 @@ const Testimonials = () => {
               {/* 3. User Profile */}
               <div className="flex items-center gap-4 mt-auto border-t border-gray-50">
                 <div
-                  className={`w-12 h-12 rounded-full ${review.color} flex-shrink-0 flex items-center justify-center text-white font-bold text-md shadow-sm`}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${review.color} flex-shrink-0 flex items-center justify-center text-white font-bold text-md shadow-sm`}
                 >
                   {review.initials}
                 </div>
                 <div className="flex flex-col justify-center">
-                  <h4 className="font-bold text-[#1e293b] text-md leading-none mb-1">
+                  <h4 className="font-bold text-[#1e293b] text-sm sm:text-md leading-none mb-1">
                     {review.name}
                   </h4>
-                  <p className="text-gray-400 text-xs leading-none">
+                  <p className="text-gray-400 text-[12px] sm:text-xs leading-none">
                     {review.role}
                   </p>
                 </div>

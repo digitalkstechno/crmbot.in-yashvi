@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Action = () => {
   return (
-    <div className="pt-25 pb-10 flex justify-center items-center">
+    <div className="py-10 sm:py-10 md:py-15 flex justify-center items-center">
       <div className="w-full flex justify-center">
         {/* Main Box */}
         <div className="max-w-7xl mx-5 md:mx-11 w-full bg-green-100 px-4 py-8 sm:px-8 sm:py-10 text-center rounded-[40px] shadow-xl">

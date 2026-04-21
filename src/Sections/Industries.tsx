@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Industries = () => {
   return (
     <>
-      <div className="pb-10" id="Industries">
+      <div className="py-10 md:py-15" id="Industries">
         <div className="max-w-6xl mx-auto px-6 text-center mb-5 sm:mb-10 mt-10">
           <div className="inline-flex items-center gap-2 mb-4">
             <motion.div
@@ -48,7 +48,7 @@ const Industries = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.5 }}
             viewport={{ once: true }} 
-         className="max-w-7xl mx-5 md:mx-11 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-5">
+         className="max-w-7xl pt-5 mx-auto px-5 md:px-11 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               title: "Textile CRM",
@@ -92,10 +92,10 @@ const Industries = () => {
 
               {/* Content */}
               <div className="z-10">
-                <h3 className="text-xl font-bold text-[#1e293b] mb-2">
+                <h3 className="text-[18px] sm:text-xl font-bold text-[#1e293b] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed text-base">
+                <p className="text-gray-500 leading-relaxed text-[15px] sm:text-base">
                   {item.desc}
                 </p>
               </div>

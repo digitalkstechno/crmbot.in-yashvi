@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Works = () => {
   return (
     <>
-      <div className="pb-15">
+      <div className="py-10 sm:py-10 md:py-15">
         <div className="max-w-6xl mx-auto px-6 text-center mb-10 sm:mb-14 mt-10">
           <div className="inline-flex items-center gap-2 ">
             <motion.div
@@ -48,11 +48,11 @@ const Works = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.5 }}
             viewport={{ once: true }} 
-        className="text-center">
+        className="text-center pt-5">
           {/* Timeline */}
           <div className="max-w-5xl mx-auto px-6 relative">
             {/* Steps */}
-            <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-4 gap-10 relative z-10">
+            <div className=" grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-4 gap-10 relative z-10">
               {[
                 {
                   title: "Capture Leads",
