@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
   const offices = [
@@ -28,20 +29,40 @@ const ContactUs = () => {
         id="Contact"
       >
         <div className="inline-flex items-center gap-3 ">
-          <div className="hidden sm:block w-7 h-px bg-green-600"></div>
-          <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.28em] uppercase text-green-600">
-            Get In Touch
-          </span>
-          <div className="hidden sm:block w-7 h-px bg-green-600"></div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-3"
+          >
+            <div className="hidden sm:block w-7 h-px bg-green-600"></div>
+            <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.28em] uppercase text-green-600">
+              Get In Touch
+            </span>
+            <div className="hidden sm:block w-7 h-px bg-green-600"></div>
+          </motion.div>
         </div>
 
-        <h2 className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight"
+        >
           Visit Our
           <span className="text-green-600 italic">Offices</span>
-        </h2>
-        <p className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]"
+        >
           Two locations in Surat, Gujarat — ready to serve you
-        </p>
+        </motion.p>
       </div>
 
       <div className="flex justify-center">
@@ -105,12 +126,24 @@ const ContactUs = () => {
       <div className=" py-16 px-6 font-sans">
         {/* 1. Heading Section */}
         <div className="text-center mb-7">
-          <h2 className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight"
+          >
             Send Us a Message
-          </h2>
-          <p className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]"
+          >
             We'll get back to you within 24 hours
-          </p>
+          </motion.p>
         </div>
 
         {/* 2. Contact Form Card */}
@@ -125,7 +158,7 @@ const ContactUs = () => {
                 <input
                   type="text"
                   placeholder="Raj"
-                  className="w-full  placeholder:text-gray-600 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
+                  className="w-full  placeholder:text-gray-400 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
                 />
               </div>
               <div className="space-y-2">
@@ -135,7 +168,7 @@ const ContactUs = () => {
                 <input
                   type="text"
                   placeholder="Patel"
-                  className="w-full placeholder:text-gray-600 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
+                  className="w-full placeholder:text-gray-400 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
                 />
               </div>
             </div>
@@ -148,7 +181,7 @@ const ContactUs = () => {
               <input
                 type="email"
                 placeholder="raj@example.com"
-                className="w-full placeholder:text-gray-600 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
+                className="w-full placeholder:text-gray-400 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
               />
             </div>
 
@@ -160,7 +193,7 @@ const ContactUs = () => {
               <input
                 type="text"
                 placeholder="+91 98765 43210"
-                className="w-full placeholder:text-gray-600 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
+                className="w-full placeholder:text-gray-400 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
               />
             </div>
 
@@ -186,7 +219,7 @@ const ContactUs = () => {
               <input
                 type="text"
                 placeholder="How can we help you?"
-                className="w-full placeholder:text-gray-600 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
+                className="w-full placeholder:text-gray-400 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition"
               />
             </div>
 
@@ -198,14 +231,14 @@ const ContactUs = () => {
               <textarea
                 rows={4}
                 placeholder="Write your message here..."
-                className="w-full placeholder:text-gray-600 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition resize-none"
+                className="w-full placeholder:text-gray-400 p-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600/20 transition resize-none"
               ></textarea>
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full placeholder:text-gray-600 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-2xl shadow-lg shadow-green-100 transition-all active:scale-[0.98]"
+              className="w-full placeholder:text-gray-400 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-2xl shadow-lg shadow-green-100 transition-all active:scale-[0.98]"
             >
               Send Message
             </button>

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Works = () => {
   return (
@@ -6,23 +7,48 @@ const Works = () => {
       <div className="pb-15">
         <div className="max-w-6xl mx-auto px-6 text-center mb-10 sm:mb-14 mt-10">
           <div className="inline-flex items-center gap-2 ">
-            <div className="hidden sm:block w-7 h-px bg-green-600"></div>
-            <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.28em] uppercase text-green-600">
-              Easy Workflow
-            </span>
-            <div className="hidden sm:block w-7 h-px bg-green-600"></div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-3"
+            >
+              <div className="hidden sm:block w-7 h-px bg-green-600"></div>
+              <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.28em] uppercase text-green-600">
+                Easy Workflow
+              </span>
+              <div className="hidden sm:block w-7 h-px bg-green-600"></div>
+            </motion.div>
           </div>
 
-          <h2 className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight"
+          >
             How CRMbot
             <span className="text-green-600 italic"> Works</span>
-          </h2>
-          <p className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]"
+          >
             From lead capture to conversion in simple steps
-          </p>
+          </motion.p>
         </div>
 
-        <div className="text-center">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+            viewport={{ once: true }} 
+        className="text-center">
           {/* Timeline */}
           <div className="max-w-5xl mx-auto px-6 relative">
             {/* Steps */}
@@ -69,7 +95,7 @@ const Works = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -45,28 +46,53 @@ const Features = () => {
   return (
     <section id="Features" className="py-12 md:py-20">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        
         {/* ── Header ── */}
         <div className="text-center mb-12 md:mb-16">
           <div className="inline-flex items-center gap-3">
-            <div className="hidden sm:block w-7 h-px bg-green-600" />
-            <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.28em] uppercase text-green-600">
-              Platform Features
-            </span>
-            <div className="hidden sm:block w-7 h-px bg-green-600" />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-3"
+            >
+              <div className="hidden sm:block w-7 h-px bg-green-600" />
+
+              <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.28em] uppercase text-green-600">
+                Platform Features
+              </span>
+              <div className="hidden sm:block w-7 h-px bg-green-600" />
+            </motion.div>
           </div>
-          <h2 className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight">
-            Everything You Need to <br/>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-2 text-[25px] min-[303px]:text-[28px] min-[352px]:text-[30px] sm:text-[36px] md:text-[42px] font-bold text-gray-900 leading-tight"
+          >
+            Everything You Need to <br />
             <span className="text-green-600 italic">Convert & Retain</span>
-          </h2>
-          <p className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-gray-500 mt-2 text-[14px] min-[400px]:text-[16px] md:text-[18px]"
+          >
             Everything you need to turn conversations into long-term customers.
-          </p>
+          </motion.p>
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mx-5 md:mx-11 items-start">
-           
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mx-5 md:mx-11 items-start"
+        >
           {/* LEFT — Feature List */}
           <div className="flex flex-col gap-3 order-2 lg:order-1">
             {data.map((item, i) => (
@@ -115,7 +141,6 @@ const Features = () => {
           {/* RIGHT — Detail Card */}
           <div className="lg:sticky lg:top-28 order-1 lg:order-2">
             <div className="relative bg-white rounded-[2rem] p-6 md:p-10 border border-green-100 shadow-2xl shadow-green-100/40 overflow-hidden">
-              
               {/* Decoration Circles */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-green-50 rounded-full opacity-50 pointer-events-none" />
               <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-green-50 rounded-full opacity-50 pointer-events-none" />
@@ -164,8 +189,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-
-        </div>
+        </motion.div>
       </div>
     </section>
   );
